@@ -5,11 +5,11 @@ const propiedades_venta = [
     descripcion:
       " Este apartamento de lujo está ubicado en una exclusiva zona residencial",
     ubicacion: "123 Luxury Lane, Prestige Suburb, CA 45678",
-    habitaciones: 4,
-    bano: 1,
-    costo: 5,
-    smoke: false,
-    pets: true,
+    habitaciones: 4 +"Habitaciones",
+    bano: 2 + "Baños",
+    costo:5000,
+    smoke:false,
+    pets:true,
   },
 
   {
@@ -18,11 +18,11 @@ const propiedades_venta = [
     descripcion:
       "Este apartamento acogedor está situado en lo alto de una montaña con impresionantes vistas",
     ubicacion: "789 Mountain Road, Summit Peaks, CA 23456",
-    habitaciones: 2,
-    bano: 1,
-    costo: 1200,
-    smoke: false,
-    pets: true,
+    habitaciones: 2+"Habitaciones",
+    bano: 1+ "Baños",
+    costo:1200,
+    smoke:false,
+    pets:true,
   },
   {
     nombre: " Penthouse de lujo con terraza panorámica",
@@ -30,21 +30,11 @@ const propiedades_venta = [
     descripcion:
       "Este penthouse de lujo ofrece una terraza panorámica con vistas espectaculares",
     ubicacion: " 567 Skyline Avenue,Skyview City, CA 56789",
-    habitaciones: 3,
-    bano: 3,
-    costo: 4500,
-    smoke: false,
-    pets: true,
-  },
-  {
-    nombre: "nomdbre",
-    src: "hola",
-    descripcion: "descripcion",
-    ubicacion: "ubicacion",
-    habitaciones: 23,
-    costo: 13,
-    smoke: false,
-    pets: true,
+    habitaciones: 3 +"Habitaciones",
+    bano: 3+ "Baños",
+    costo:4500,
+    smoke:false,
+    pets:true,
   },
 ];
 
