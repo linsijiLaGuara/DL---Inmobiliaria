@@ -54,7 +54,6 @@ function renderizarObejtoAHtml(object) {
 
   let nombre = "<h5 class='card-title'> " + object.nombre + "</h5> ";
 
-
   let descripcion = "<p class='card-text'> " + object.descripcion + "</p>";
 
   let ubicacion =
@@ -88,6 +87,14 @@ function renderizarObejtoAHtml(object) {
   );
 }
 
-console.log(renderizarObejtoAHtml(propiedades_venta[3]));
-const doo = (document.getElementById("contenedor-venta").innerHTML +=
-  renderizarObejtoAHtml(propiedades_venta[0]));
+const contenedorVenta_1 = (document.getElementById(
+  "contenedor-venta"
+).innerHTML += renderizarObejtoAHtml(propiedades_venta[0]));
+
+const contenedorVenta_2 = (document.getElementById(
+  "contenedor-vent"
+).innerHTML += renderizarObejtoAHtml(propiedades_venta[1]));
+
+const contenedorVenta_3 = (document.getElementById(
+  "contenedor-ventas"
+).innerHTML += renderizarObejtoAHtml(propiedades_venta[2]));
