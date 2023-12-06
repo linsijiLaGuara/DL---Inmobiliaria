@@ -38,7 +38,7 @@ const propiedades_alquiler = [
   },
 ];
 
-function renderizarAlquilerhtml(object) {
+function renderizarAlquilerHtml(object) {
   let inicio = "<div class='col-md-4 mb-4'><div class='card'>";
   let image = " <img src='" + object.src + "' class='card-img-top'/>";
   let cardbody = "<div class='card-body'> ";
@@ -95,7 +95,7 @@ function renderizarAlquilerhtml(object) {
 function renderizar_todos_los_alquileres() {
   let todos_los_alquileres = "";
   for (const alquiler of propiedades_alquiler) {
-    todos_los_alquileres += renderizarAlquilerhtml(alquiler);
+    todos_los_alquileres += renderizarAlquilerHtml(alquiler);
     console.log(alquiler);
   }
   const contenedorAlquiler_1 = (document.getElementById(

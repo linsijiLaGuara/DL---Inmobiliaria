@@ -5,11 +5,11 @@ const propiedades_venta = [
     descripcion:
       " Este apartamento de lujo está ubicado en una exclusiva zona residencial",
     ubicacion: "123 Luxury Lane, Prestige Suburb, CA 45678",
-    habitaciones: 4 +"Habitaciones",
+    habitaciones: 4 + "Habitaciones",
     bano: 2 + "Baños",
-    costo:5000,
-    smoke:false,
-    pets:true,
+    costo: 5000,
+    smoke: false,
+    pets: false,
   },
 
   {
@@ -18,11 +18,11 @@ const propiedades_venta = [
     descripcion:
       "Este apartamento acogedor está situado en lo alto de una montaña con impresionantes vistas",
     ubicacion: "789 Mountain Road, Summit Peaks, CA 23456",
-    habitaciones: 2+"Habitaciones",
-    bano: 1+ "Baños",
-    costo:1200,
-    smoke:false,
-    pets:true,
+    habitaciones: 2 + "Habitaciones",
+    bano: 1 + "Baños",
+    costo: 1200,
+    smoke: true,
+    pets: true,
   },
   {
     nombre: " Penthouse de lujo con terraza panorámica",
@@ -30,15 +30,16 @@ const propiedades_venta = [
     descripcion:
       "Este penthouse de lujo ofrece una terraza panorámica con vistas espectaculares",
     ubicacion: " 567 Skyline Avenue,Skyview City, CA 56789",
-    habitaciones: 3 +"Habitaciones",
-    bano: 3+ "Baños",
-    costo:4500,
-    smoke:false,
-    pets:true,
+    habitaciones: 3 + "Habitaciones",
+    bano: 3 + "Baños",
+    costo: 4500,
+    smoke: false,
+    pets: true,
   },
 ];
 
-function renderizarObejtoAHtml(object) {
+function renderizarVentasHtml(object) {
+  let inicio = "<div class='col-md-4 mb-4'><div class='card'>";
   let image = " <img src='" + object.src + "' class='card-img-top'/>";
   let cardbody = "<div class='card-body'> ";
 
@@ -53,16 +54,29 @@ function renderizarObejtoAHtml(object) {
   let bano = "<p> <i class='fas fa-bath'></i>  " + object.bano + "</p>";
   let costo =
     "<p> <i class='fas fa-dollar-sign'></i>  " + object.costo + "</p>";
-  let smoke =
-    "<p class='text-danger'><i class='fas fa-smoking-ban'></i> " +
-    object.smoke +
-    "</p>";
-  let pets =
-    "<p class='text-danger'><i class='fa-solid fa-ban'></i> " +
-    object.pets +
-    "</p>";
+
+  let smoke = "";
+  if (object.smoke) {
+    smoke =
+      "<p class='text-success'><i class='fas fa-smoking'></i> Permitido fumar</p>";
+  } else {
+    smoke =
+      "<p class='text-danger'><i class='fas fa-smoking-ban'></i> No se permite fumar</p>";
+  }
+
+  let pets = "";
+  if (object.pets) {
+    pets =
+      "<p class='text-success'><i class='fas fa-paw'></i> Mascotas permitidas </p>";
+  } else {
+    pets =
+      "<p class='text-danger'><i class='fas fa-ban'></i> No se permiten mascotas </p> ";
+  }
+
   let carbodyfinal = "</div>";
+  let fin = "</div></div>";
   return (
+    inicio +
     image +
     cardbody +
     nombre +
@@ -73,18 +87,20 @@ function renderizarObejtoAHtml(object) {
     costo +
     smoke +
     pets +
-    carbodyfinal
+    carbodyfinal +
+    fin
   );
 }
 
-const contenedorVenta_1 = (document.getElementById(
-  "contenedor-venta"
-).innerHTML += renderizarObejtoAHtml(propiedades_venta[0]));
+function renderizar_todas_las_ventas() {
+  let propiedad_de_venta = "";
+  for (const venta of propiedades_venta) {
+    propiedad_de_venta += renderizarVentasHtml(venta);
+    console.log(venta);
+  }
+  const contenedorVenta_1 = (document.getElementById(
+    "contenedor-ventas"
+  ).innerHTML += propiedad_de_venta);
+}
 
-const contenedorVenta_2 = (document.getElementById(
-  "contenedor-vent"
-).innerHTML += renderizarObejtoAHtml(propiedades_venta[1]));
-
-const contenedorVenta_3 = (document.getElementById(
-  "contenedor-ventas"
-).innerHTML += renderizarObejtoAHtml(propiedades_venta[2]));
+renderizar_todas_las_ventas();
