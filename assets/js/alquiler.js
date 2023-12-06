@@ -11,6 +11,18 @@ const propiedades_alquiler = [
     smoke: false,
     pets: true,
   },
+  {
+    nombre: "Casa la castellana",
+    src: "http://www.hogar.com.do/files/12-2023/ad6276/1701541143666839176_large.jpg",
+    descripcion:
+      " Encantadora casa en alquiler, situada en el apacible sector residencial La castellana",
+    ubicacion: "123 Main Street, Anytown, CA 91234",
+    habitaciones: 6 + "Habitaciones ",
+    bano: 6 + "Baños",
+    costo: 2000,
+    smoke: false,
+    pets: false,
+  },
 
   {
     nombre: "Apartamento luminoso con vista al mar",
