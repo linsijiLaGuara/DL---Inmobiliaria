@@ -1,5 +1,17 @@
 const propiedades_venta = [
   {
+    nombre: "Villa en Punta Cana residencial del Mar",
+    src: "http://www.hogar.com.do/files/12-2023/ad6277/170164612561893758_large.jpeg",
+    descripcion:
+      " Espectacular Villa de 160m2 de dos niveles más una terraza superior, tres habitaciones",
+    ubicacion: "123 Luxury Lane, Prestige Suburb, CA 45678",
+    habitaciones: 3 + "Habitaciones",
+    bano: 3 + "Baños",
+    costo: 5000,
+    smoke: false,
+    pets: false,
+  },
+  {
     nombre: " Apartamento de lujo en zona exclusiva",
     src: "https://fotos.perfil.com/2018/09/21/trim/950/534/nueva-york-09212018-366965.jpg",
     descripcion:
@@ -8,8 +20,21 @@ const propiedades_venta = [
     habitaciones: 4 + "Habitaciones",
     bano: 2 + "Baños",
     costo: 5000,
-    smoke: false,
+    smoke: true,
     pets: false,
+  },
+
+  {
+    nombre: " Casa en Venta en Santa Cruz",
+    src: "http://www.hogar.com.do/files/06-2015/ad1170/large_1435633737687348372.jpg",
+    descripcion:
+      "Linda casa estilo chileno, construida el año 2018, con gran piscina.",
+    ubicacion: "Libertador General Bernardo O'higgins",
+    habitaciones: 4 + "Habitaciones",
+    bano: 5 + "Baños",
+    costo: 5000,
+    smoke: false,
+    pets: true,
   },
 
   {
